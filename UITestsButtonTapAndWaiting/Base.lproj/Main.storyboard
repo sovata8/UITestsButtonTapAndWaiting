@@ -1,0 +1,673 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="OsC-7Y-8fi">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="F0k-NO-aYh">
+            <objects>
+                <viewController id="OsC-7Y-8fi" customClass="ViewController" customModule="UITestsButtonTapAndWaiting" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="B7m-Ps-YZu">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="nk8-j3-Hi8">
+                                <rect key="frame" x="20" y="44" width="374" height="755"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bPi-Pd-eXR" userLabel="Sample 1">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="68.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.25" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uRS-pH-pbd">
+                                                <rect key="frame" x="168.5" y="2" width="37.5" height="64.5"/>
+                                                <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="62"/>
+                                                <color key="textColor" systemColor="tertiaryLabelColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wik-BQ-Rzk">
+                                                <rect key="frame" x="308" y="12.5" width="56" height="44"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="button_go_1"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="Go">
+                                                    <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle1"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="buttonGoTapped" destination="OsC-7Y-8fi" eventType="touchUpInside" id="ABx-vH-rpY"/>
+                                                </connections>
+                                            </button>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" scrollEnabled="NO" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PFH-R2-BIu">
+                                                <rect key="frame" x="5" y="0.0" width="200" height="68.5"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="200" id="Xel-s4-het"/>
+                                                </constraints>
+                                                <string key="text">&gt; Regular button setup
+
+✔ User can tap
+✔ tap() works as expected
+✔ strictTap()</string>
+                                                <color key="textColor" systemColor="labelColor"/>
+                                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="9"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" scrollEnabled="NO" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lbz-rM-rTf">
+                                                <rect key="frame" x="210" y="0.0" width="75.5" height="58"/>
+                                                <string key="text">✔ exists
+✔ isHittable
+✔ isEnabled
+✔ isVisible</string>
+                                                <color key="textColor" systemColor="secondaryLabelColor"/>
+                                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="9"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="Wik-BQ-Rzk" firstAttribute="centerY" secondItem="bPi-Pd-eXR" secondAttribute="centerY" id="1nh-d6-Fnu"/>
+                                            <constraint firstItem="Lbz-rM-rTf" firstAttribute="leading" secondItem="PFH-R2-BIu" secondAttribute="trailing" constant="5" id="Bm7-Hk-34X"/>
+                                            <constraint firstAttribute="bottom" secondItem="PFH-R2-BIu" secondAttribute="bottom" id="Cl2-U5-mHd"/>
+                                            <constraint firstItem="Lbz-rM-rTf" firstAttribute="top" secondItem="PFH-R2-BIu" secondAttribute="top" id="Jam-gu-b4Y"/>
+                                            <constraint firstItem="uRS-pH-pbd" firstAttribute="centerY" secondItem="bPi-Pd-eXR" secondAttribute="centerY" id="KDN-9k-wCb"/>
+                                            <constraint firstItem="uRS-pH-pbd" firstAttribute="centerX" secondItem="bPi-Pd-eXR" secondAttribute="centerX" id="LTg-Ld-boP"/>
+                                            <constraint firstItem="PFH-R2-BIu" firstAttribute="leading" secondItem="bPi-Pd-eXR" secondAttribute="leading" constant="5" id="ZKG-A2-Yep"/>
+                                            <constraint firstItem="Wik-BQ-Rzk" firstAttribute="trailing" secondItem="bPi-Pd-eXR" secondAttribute="trailing" constant="-10" id="bPy-eC-il4"/>
+                                            <constraint firstItem="PFH-R2-BIu" firstAttribute="top" secondItem="bPi-Pd-eXR" secondAttribute="top" id="nPI-n9-gT1"/>
+                                            <constraint firstItem="uRS-pH-pbd" firstAttribute="top" secondItem="bPi-Pd-eXR" secondAttribute="top" constant="2" id="va7-R8-M8G"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5BW-DQ-ECm" userLabel="Sample 2">
+                                        <rect key="frame" x="0.0" y="71.5" width="374" height="79"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.25" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cZv-gH-Wzk">
+                                                <rect key="frame" x="168.5" y="2" width="37.5" height="75"/>
+                                                <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="62"/>
+                                                <color key="textColor" systemColor="tertiaryLabelColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oIO-bm-ICo">
+                                                <rect key="frame" x="308" y="17.5" width="56" height="44"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="button_go_2"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="Go">
+                                                    <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle1"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="buttonGoTapped" destination="OsC-7Y-8fi" eventType="touchUpInside" id="R8c-lE-LvD"/>
+                                                </connections>
+                                            </button>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" scrollEnabled="NO" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rr9-i7-Zy4">
+                                                <rect key="frame" x="5" y="0.0" width="200" height="79"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="200" id="KYy-IX-Ayx"/>
+                                                </constraints>
+                                                <string key="text">&gt; Button isEnabled = false and isUserInteractionEnabled = false
+
+✘ User can't tap.
+✔ [!] tap() does not throw an error
+✘ strictTap()</string>
+                                                <color key="textColor" systemColor="labelColor"/>
+                                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="9"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" scrollEnabled="NO" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DKR-dD-ocj">
+                                                <rect key="frame" x="210" y="0.0" width="75.5" height="58"/>
+                                                <string key="text">✔ exists
+✔ isHittable
+✘ isEnabled
+✔ isVisible</string>
+                                                <color key="textColor" systemColor="secondaryLabelColor"/>
+                                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="9"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="cZv-gH-Wzk" firstAttribute="centerX" secondItem="5BW-DQ-ECm" secondAttribute="centerX" id="6I9-4f-Ait"/>
+                                            <constraint firstItem="oIO-bm-ICo" firstAttribute="trailing" secondItem="5BW-DQ-ECm" secondAttribute="trailing" constant="-10" id="MaL-Mf-MUc"/>
+                                            <constraint firstItem="Rr9-i7-Zy4" firstAttribute="top" secondItem="5BW-DQ-ECm" secondAttribute="top" id="OHg-42-8i8"/>
+                                            <constraint firstItem="cZv-gH-Wzk" firstAttribute="centerY" secondItem="5BW-DQ-ECm" secondAttribute="centerY" id="PGu-ZO-njU"/>
+                                            <constraint firstItem="DKR-dD-ocj" firstAttribute="top" secondItem="Rr9-i7-Zy4" secondAttribute="top" id="R5C-6I-B1U"/>
+                                            <constraint firstAttribute="bottom" secondItem="Rr9-i7-Zy4" secondAttribute="bottom" id="f4F-Us-BuV"/>
+                                            <constraint firstItem="DKR-dD-ocj" firstAttribute="leading" secondItem="Rr9-i7-Zy4" secondAttribute="trailing" constant="5" id="omw-bT-bFt"/>
+                                            <constraint firstItem="cZv-gH-Wzk" firstAttribute="top" secondItem="5BW-DQ-ECm" secondAttribute="top" constant="2" id="rQF-jU-vvM"/>
+                                            <constraint firstItem="Rr9-i7-Zy4" firstAttribute="leading" secondItem="5BW-DQ-ECm" secondAttribute="leading" constant="5" id="t7w-mB-Tt8"/>
+                                            <constraint firstItem="oIO-bm-ICo" firstAttribute="centerY" secondItem="5BW-DQ-ECm" secondAttribute="centerY" id="yYk-qB-4zr"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fDo-6o-Bvu" userLabel="Sample 3">
+                                        <rect key="frame" x="0.0" y="153.5" width="374" height="79"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.25" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mQm-xa-Of2">
+                                                <rect key="frame" x="168.5" y="2" width="37.5" height="75"/>
+                                                <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="62"/>
+                                                <color key="textColor" systemColor="tertiaryLabelColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bya-dV-cxr">
+                                                <rect key="frame" x="308" y="17.5" width="56" height="44"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="button_go_3"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="Go">
+                                                    <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle1"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="buttonGoTapped" destination="OsC-7Y-8fi" eventType="touchUpInside" id="CTc-8n-a4V"/>
+                                                </connections>
+                                            </button>
+                                            <view alpha="0.25" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hWd-gb-Yrd" userLabel="Blocker">
+                                                <rect key="frame" x="301" y="12" width="70" height="55"/>
+                                                <color key="backgroundColor" systemColor="systemRedColor"/>
+                                            </view>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" scrollEnabled="NO" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gw8-hc-NKw">
+                                                <rect key="frame" x="5" y="0.0" width="200" height="79"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="200" id="Gwb-UH-uLs"/>
+                                                </constraints>
+                                                <string key="text">&gt; Button covered by a view which has interactions enabled
+
+✘ User can't tap
+✘ tap() throws an error
+✘ strictTap()</string>
+                                                <color key="textColor" systemColor="labelColor"/>
+                                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="9"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" scrollEnabled="NO" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xq8-eR-TsQ">
+                                                <rect key="frame" x="210" y="0.0" width="75.5" height="58"/>
+                                                <string key="text">✔ exists
+✘ isHittable
+✔ isEnabled
+✔ isVisible</string>
+                                                <color key="textColor" systemColor="secondaryLabelColor"/>
+                                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="9"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="mQm-xa-Of2" firstAttribute="top" secondItem="fDo-6o-Bvu" secondAttribute="top" constant="2" id="0Ly-Vz-crD"/>
+                                            <constraint firstItem="mQm-xa-Of2" firstAttribute="centerY" secondItem="fDo-6o-Bvu" secondAttribute="centerY" id="5Kc-fy-eEw"/>
+                                            <constraint firstItem="mQm-xa-Of2" firstAttribute="centerX" secondItem="fDo-6o-Bvu" secondAttribute="centerX" id="G4k-kx-Wjg"/>
+                                            <constraint firstItem="xq8-eR-TsQ" firstAttribute="top" secondItem="gw8-hc-NKw" secondAttribute="top" id="HDb-x3-fBi"/>
+                                            <constraint firstItem="hWd-gb-Yrd" firstAttribute="centerX" secondItem="bya-dV-cxr" secondAttribute="centerX" id="MeN-ta-KVY"/>
+                                            <constraint firstItem="xq8-eR-TsQ" firstAttribute="leading" secondItem="gw8-hc-NKw" secondAttribute="trailing" constant="5" id="OIA-yx-ZT5"/>
+                                            <constraint firstAttribute="bottom" secondItem="gw8-hc-NKw" secondAttribute="bottom" id="SgP-a8-ZJf"/>
+                                            <constraint firstItem="bya-dV-cxr" firstAttribute="trailing" secondItem="fDo-6o-Bvu" secondAttribute="trailing" constant="-10" id="TOZ-Fk-XB2"/>
+                                            <constraint firstItem="hWd-gb-Yrd" firstAttribute="height" secondItem="bya-dV-cxr" secondAttribute="height" multiplier="1.25" id="Wdl-PJ-STd"/>
+                                            <constraint firstItem="hWd-gb-Yrd" firstAttribute="width" secondItem="bya-dV-cxr" secondAttribute="width" multiplier="1.25" id="bqr-Co-hTf"/>
+                                            <constraint firstItem="bya-dV-cxr" firstAttribute="centerY" secondItem="fDo-6o-Bvu" secondAttribute="centerY" id="htc-t2-IsV"/>
+                                            <constraint firstItem="gw8-hc-NKw" firstAttribute="top" secondItem="fDo-6o-Bvu" secondAttribute="top" id="jLw-MZ-Gfz"/>
+                                            <constraint firstItem="gw8-hc-NKw" firstAttribute="leading" secondItem="fDo-6o-Bvu" secondAttribute="leading" constant="5" id="mme-1q-udR"/>
+                                            <constraint firstItem="hWd-gb-Yrd" firstAttribute="centerY" secondItem="bya-dV-cxr" secondAttribute="centerY" id="wXZ-Wh-oJQ"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kSA-w4-Uvc" userLabel="Sample 4">
+                                        <rect key="frame" x="0.0" y="235.5" width="374" height="79"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.25" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XwW-vo-2xa">
+                                                <rect key="frame" x="168.5" y="2" width="37.5" height="75"/>
+                                                <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="62"/>
+                                                <color key="textColor" systemColor="tertiaryLabelColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i6U-Vn-1ve" userLabel="Container">
+                                                <rect key="frame" x="366" y="12" width="6" height="55"/>
+                                                <subviews>
+                                                    <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ra2-Jn-s4P">
+                                                        <rect key="frame" x="-58" y="5.5" width="56" height="44"/>
+                                                        <accessibility key="accessibilityConfiguration" identifier="button_go_4"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="filled" title="Go">
+                                                            <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle1"/>
+                                                        </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="buttonGoTapped" destination="OsC-7Y-8fi" eventType="touchUpInside" id="eSd-rT-BJ6"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="secondarySystemFillColor"/>
+                                                <constraints>
+                                                    <constraint firstItem="ra2-Jn-s4P" firstAttribute="centerY" secondItem="i6U-Vn-1ve" secondAttribute="centerY" id="28l-aT-3rW"/>
+                                                    <constraint firstAttribute="height" constant="55" id="DBq-Bw-L15"/>
+                                                    <constraint firstAttribute="trailing" secondItem="ra2-Jn-s4P" secondAttribute="trailing" constant="8" id="DgR-UM-HDg"/>
+                                                    <constraint firstAttribute="width" constant="6" id="W9O-Kl-YHz"/>
+                                                </constraints>
+                                            </view>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" scrollEnabled="NO" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e9d-Ik-KSq">
+                                                <rect key="frame" x="5" y="0.0" width="200" height="79"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="200" id="XMV-9g-4pJ"/>
+                                                </constraints>
+                                                <string key="text">&gt; Button embedded in a view but outside its bounds (i.e. clipped)
+
+✘ User can't tap
+✘ tap() throws an error
+✘ strictTap()</string>
+                                                <color key="textColor" systemColor="labelColor"/>
+                                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="9"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" scrollEnabled="NO" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lwv-AN-6RZ">
+                                                <rect key="frame" x="210" y="0.0" width="75.5" height="58"/>
+                                                <string key="text">✔ exists
+✘ isHittable
+✘ isEnabled
+✔ isVisible</string>
+                                                <color key="textColor" systemColor="secondaryLabelColor"/>
+                                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="9"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="Lwv-AN-6RZ" firstAttribute="leading" secondItem="e9d-Ik-KSq" secondAttribute="trailing" constant="5" id="1vY-42-ZRA"/>
+                                            <constraint firstItem="e9d-Ik-KSq" firstAttribute="top" secondItem="kSA-w4-Uvc" secondAttribute="top" id="91T-8l-XTg"/>
+                                            <constraint firstItem="i6U-Vn-1ve" firstAttribute="centerY" secondItem="kSA-w4-Uvc" secondAttribute="centerY" id="KsB-4Q-dZ9"/>
+                                            <constraint firstItem="XwW-vo-2xa" firstAttribute="centerY" secondItem="kSA-w4-Uvc" secondAttribute="centerY" id="O7V-81-PTW"/>
+                                            <constraint firstItem="e9d-Ik-KSq" firstAttribute="leading" secondItem="kSA-w4-Uvc" secondAttribute="leading" constant="5" id="XNk-Gb-TuO"/>
+                                            <constraint firstAttribute="trailing" secondItem="i6U-Vn-1ve" secondAttribute="trailing" constant="2" id="dhx-qX-Hvx"/>
+                                            <constraint firstItem="XwW-vo-2xa" firstAttribute="centerX" secondItem="kSA-w4-Uvc" secondAttribute="centerX" id="h5T-EJ-sMJ"/>
+                                            <constraint firstAttribute="bottom" secondItem="e9d-Ik-KSq" secondAttribute="bottom" id="m1G-bE-18f"/>
+                                            <constraint firstItem="XwW-vo-2xa" firstAttribute="top" secondItem="kSA-w4-Uvc" secondAttribute="top" constant="2" id="poK-91-tF2"/>
+                                            <constraint firstItem="Lwv-AN-6RZ" firstAttribute="top" secondItem="e9d-Ik-KSq" secondAttribute="top" id="xcO-kJ-KVZ"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qFr-bp-Xme" userLabel="Sample 5">
+                                        <rect key="frame" x="0.0" y="317.5" width="374" height="79"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.25" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QaE-5B-gXS">
+                                                <rect key="frame" x="168.5" y="2" width="37.5" height="75"/>
+                                                <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="62"/>
+                                                <color key="textColor" systemColor="tertiaryLabelColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lue-Fv-ySc" userLabel="Go">
+                                                <rect key="frame" x="364" y="39.5" width="0.0" height="0.0"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="button_go_5"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" id="NZN-XY-h53"/>
+                                                    <constraint firstAttribute="width" id="whN-5u-fp6"/>
+                                                </constraints>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain"/>
+                                                <connections>
+                                                    <action selector="buttonGoTapped" destination="OsC-7Y-8fi" eventType="touchUpInside" id="Viw-aH-CSg"/>
+                                                </connections>
+                                            </button>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" scrollEnabled="NO" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rW2-Z6-7Ox">
+                                                <rect key="frame" x="5" y="0.0" width="200" height="79"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="200" id="nro-lK-vIv"/>
+                                                </constraints>
+                                                <string key="text">&gt; Button with width and height = 0
+
+✘ User can't tap
+✔ tap() does not throw an error
+✔ strictTap() (unless button is old style)</string>
+                                                <color key="textColor" systemColor="labelColor"/>
+                                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="9"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" scrollEnabled="NO" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NWq-US-eoU">
+                                                <rect key="frame" x="210" y="0.0" width="91.5" height="58"/>
+                                                <string key="text">✔ exists
+✔ isHittable
+✔ isEnabled
+✔ [!] isVisible</string>
+                                                <color key="textColor" systemColor="secondaryLabelColor"/>
+                                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="9"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="rW2-Z6-7Ox" secondAttribute="bottom" id="23m-aJ-oea"/>
+                                            <constraint firstItem="lue-Fv-ySc" firstAttribute="centerY" secondItem="qFr-bp-Xme" secondAttribute="centerY" id="377-l7-Dgt"/>
+                                            <constraint firstItem="QaE-5B-gXS" firstAttribute="centerX" secondItem="qFr-bp-Xme" secondAttribute="centerX" id="9TA-ti-LXH"/>
+                                            <constraint firstItem="NWq-US-eoU" firstAttribute="leading" secondItem="rW2-Z6-7Ox" secondAttribute="trailing" constant="5" id="E2r-7N-QlR"/>
+                                            <constraint firstItem="QaE-5B-gXS" firstAttribute="top" secondItem="qFr-bp-Xme" secondAttribute="top" constant="2" id="O4V-Bn-ydm"/>
+                                            <constraint firstItem="lue-Fv-ySc" firstAttribute="trailing" secondItem="qFr-bp-Xme" secondAttribute="trailing" constant="-10" id="Xlk-8l-Jqa"/>
+                                            <constraint firstItem="rW2-Z6-7Ox" firstAttribute="leading" secondItem="qFr-bp-Xme" secondAttribute="leading" constant="5" id="f0f-2L-0Z4"/>
+                                            <constraint firstItem="QaE-5B-gXS" firstAttribute="centerY" secondItem="qFr-bp-Xme" secondAttribute="centerY" id="j5p-E8-75k"/>
+                                            <constraint firstItem="NWq-US-eoU" firstAttribute="top" secondItem="rW2-Z6-7Ox" secondAttribute="top" id="kaD-2E-Z5B"/>
+                                            <constraint firstItem="rW2-Z6-7Ox" firstAttribute="top" secondItem="qFr-bp-Xme" secondAttribute="top" id="uoI-b5-Hti"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SH1-v7-ZeM" userLabel="Sample 6">
+                                        <rect key="frame" x="0.0" y="399.5" width="374" height="68.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.25" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="6" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wP8-g3-gOE">
+                                                <rect key="frame" x="168.5" y="2" width="37.5" height="64.5"/>
+                                                <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="62"/>
+                                                <color key="textColor" systemColor="tertiaryLabelColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" scrollEnabled="NO" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qp8-pY-J4W">
+                                                <rect key="frame" x="5" y="0.0" width="200" height="68.5"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="200" id="4po-dC-BHd"/>
+                                                </constraints>
+                                                <string key="text">&gt; Button is completely off screen
+
+✘ User can't tap
+✘ tap() throws an error
+✘ strictTap()</string>
+                                                <color key="textColor" systemColor="labelColor"/>
+                                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="9"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" scrollEnabled="NO" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B7K-rX-RaU">
+                                                <rect key="frame" x="210" y="0.0" width="75.5" height="58"/>
+                                                <string key="text">✔ exists
+✘ isHittable
+✔ isEnabled
+✘ isVisible</string>
+                                                <color key="textColor" systemColor="secondaryLabelColor"/>
+                                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="9"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="B7K-rX-RaU" firstAttribute="top" secondItem="Qp8-pY-J4W" secondAttribute="top" id="0X7-Mk-K0f"/>
+                                            <constraint firstItem="Qp8-pY-J4W" firstAttribute="leading" secondItem="SH1-v7-ZeM" secondAttribute="leading" constant="5" id="41y-U9-8IU"/>
+                                            <constraint firstItem="Qp8-pY-J4W" firstAttribute="top" secondItem="SH1-v7-ZeM" secondAttribute="top" id="Eyy-jB-hrM"/>
+                                            <constraint firstItem="wP8-g3-gOE" firstAttribute="centerX" secondItem="SH1-v7-ZeM" secondAttribute="centerX" id="Mpu-Bn-Ajo"/>
+                                            <constraint firstItem="wP8-g3-gOE" firstAttribute="top" secondItem="SH1-v7-ZeM" secondAttribute="top" constant="2" id="Wd4-rh-JSQ"/>
+                                            <constraint firstAttribute="bottom" secondItem="Qp8-pY-J4W" secondAttribute="bottom" id="fuB-BL-dlS"/>
+                                            <constraint firstItem="B7K-rX-RaU" firstAttribute="leading" secondItem="Qp8-pY-J4W" secondAttribute="trailing" constant="5" id="hm4-Hh-P3D"/>
+                                            <constraint firstItem="wP8-g3-gOE" firstAttribute="centerY" secondItem="SH1-v7-ZeM" secondAttribute="centerY" id="lOX-r9-2WA"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0uw-yw-Xpg" userLabel="Sample 7">
+                                        <rect key="frame" x="0.0" y="471" width="374" height="89.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.25" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="7" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bK3-rH-1wz">
+                                                <rect key="frame" x="168.5" y="2" width="37.5" height="85.5"/>
+                                                <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="62"/>
+                                                <color key="textColor" systemColor="tertiaryLabelColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" scrollEnabled="NO" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gHb-Sb-poL">
+                                                <rect key="frame" x="4" y="0.0" width="200" height="89.5"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="200" id="PnF-SA-wAa"/>
+                                                </constraints>
+                                                <string key="text">&gt; Button is almost off screen (4 points inside)
+
+✔? User can tap? On Simulator with a mouse it's possible
+✘ tap() throws an error
+✘ strictTap()</string>
+                                                <color key="textColor" systemColor="labelColor"/>
+                                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="9"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" scrollEnabled="NO" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mub-hF-LI5">
+                                                <rect key="frame" x="209" y="0.0" width="91.5" height="58"/>
+                                                <string key="text">✔ exists
+✘ isHittable
+✔ isEnabled
+✘ [!] isVisible</string>
+                                                <color key="textColor" systemColor="secondaryLabelColor"/>
+                                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="9"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="bK3-rH-1wz" firstAttribute="top" secondItem="0uw-yw-Xpg" secondAttribute="top" constant="2" id="Cgv-Ph-iE2"/>
+                                            <constraint firstItem="gHb-Sb-poL" firstAttribute="leading" secondItem="0uw-yw-Xpg" secondAttribute="leading" constant="4" id="OOB-0i-jWX"/>
+                                            <constraint firstItem="gHb-Sb-poL" firstAttribute="top" secondItem="0uw-yw-Xpg" secondAttribute="top" id="R6N-B6-09R"/>
+                                            <constraint firstAttribute="bottom" secondItem="gHb-Sb-poL" secondAttribute="bottom" id="RcD-Cc-BV6"/>
+                                            <constraint firstItem="bK3-rH-1wz" firstAttribute="centerY" secondItem="0uw-yw-Xpg" secondAttribute="centerY" id="WTy-ez-ECi"/>
+                                            <constraint firstItem="bK3-rH-1wz" firstAttribute="centerX" secondItem="0uw-yw-Xpg" secondAttribute="centerX" id="g42-cD-Dya"/>
+                                            <constraint firstItem="mub-hF-LI5" firstAttribute="leading" secondItem="gHb-Sb-poL" secondAttribute="trailing" constant="5" id="hgx-oc-8Jv"/>
+                                            <constraint firstItem="mub-hF-LI5" firstAttribute="top" secondItem="gHb-Sb-poL" secondAttribute="top" id="jMe-SG-Shc"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IxK-TG-QbA" userLabel="Sample 8">
+                                        <rect key="frame" x="0.0" y="563.5" width="374" height="89.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.25" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y1T-9a-wnm">
+                                                <rect key="frame" x="168.5" y="2" width="37.5" height="85.5"/>
+                                                <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="62"/>
+                                                <color key="textColor" systemColor="tertiaryLabelColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" scrollEnabled="NO" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lPi-mk-DoY">
+                                                <rect key="frame" x="4" y="0.0" width="200" height="89.5"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="200" id="cV0-oI-nmg"/>
+                                                </constraints>
+                                                <string key="text">&gt; Button is almost off screen (5 points inside)
+
+✔? User can tap? On Simulator with a mouse it's possible
+✔ [!] tap() works
+✘ strictTap()</string>
+                                                <color key="textColor" systemColor="labelColor"/>
+                                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="9"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" scrollEnabled="NO" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c3c-pR-3Ln">
+                                                <rect key="frame" x="209" y="0.0" width="91.5" height="58"/>
+                                                <string key="text">✔ exists
+✔ isHittable
+✔ isEnabled
+✘ [!] isVisible</string>
+                                                <color key="textColor" systemColor="secondaryLabelColor"/>
+                                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="9"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="c3c-pR-3Ln" firstAttribute="leading" secondItem="lPi-mk-DoY" secondAttribute="trailing" constant="5" id="2gj-N7-M6D"/>
+                                            <constraint firstItem="lPi-mk-DoY" firstAttribute="leading" secondItem="IxK-TG-QbA" secondAttribute="leading" constant="4" id="8jr-7r-v8I"/>
+                                            <constraint firstItem="Y1T-9a-wnm" firstAttribute="centerY" secondItem="IxK-TG-QbA" secondAttribute="centerY" id="SQA-ri-TDy"/>
+                                            <constraint firstItem="Y1T-9a-wnm" firstAttribute="centerX" secondItem="IxK-TG-QbA" secondAttribute="centerX" id="Tto-fA-GFr"/>
+                                            <constraint firstItem="lPi-mk-DoY" firstAttribute="top" secondItem="IxK-TG-QbA" secondAttribute="top" id="ZBJ-YK-Jn6"/>
+                                            <constraint firstItem="c3c-pR-3Ln" firstAttribute="top" secondItem="lPi-mk-DoY" secondAttribute="top" id="feM-91-bDD"/>
+                                            <constraint firstItem="Y1T-9a-wnm" firstAttribute="top" secondItem="IxK-TG-QbA" secondAttribute="top" constant="2" id="wAK-gZ-qCY"/>
+                                            <constraint firstAttribute="bottom" secondItem="lPi-mk-DoY" secondAttribute="bottom" id="xJO-eh-fen"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TaU-bq-KUZ" userLabel="Sample 9">
+                                        <rect key="frame" x="0.0" y="656" width="374" height="68.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.25" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="9" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TIU-GJ-jrN">
+                                                <rect key="frame" x="168.5" y="2" width="37.5" height="64.5"/>
+                                                <fontDescription key="fontDescription" name="Menlo-Bold" family="Menlo" pointSize="62"/>
+                                                <color key="textColor" systemColor="tertiaryLabelColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bpP-uu-VOR" userLabel="Button Go 9">
+                                                <rect key="frame" x="308" y="12.5" width="56" height="44"/>
+                                                <accessibility key="accessibilityConfiguration" identifier="button_go_9"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="Go">
+                                                    <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle1"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="buttonGoTapped" destination="OsC-7Y-8fi" eventType="touchUpInside" id="Vvv-1n-ssc"/>
+                                                </connections>
+                                            </button>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" scrollEnabled="NO" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pFd-4x-XEP">
+                                                <rect key="frame" x="5" y="0.0" width="200" height="68.5"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="200" id="pVT-hz-MW9"/>
+                                                </constraints>
+                                                <string key="text">&gt; Button isHidden = true
+
+✘ User can't tap
+✘ tap() throws an error
+✘ strictTap()</string>
+                                                <color key="textColor" systemColor="labelColor"/>
+                                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="9"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" scrollEnabled="NO" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dms-lX-gt0">
+                                                <rect key="frame" x="210" y="0.0" width="75.5" height="58"/>
+                                                <string key="text">✘ exists
+✘ isHittable
+⦻ isEnabled
+✘ isVisible</string>
+                                                <color key="textColor" systemColor="secondaryLabelColor"/>
+                                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="9"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="dms-lX-gt0" firstAttribute="leading" secondItem="pFd-4x-XEP" secondAttribute="trailing" constant="5" id="AZv-kv-ErE"/>
+                                            <constraint firstItem="pFd-4x-XEP" firstAttribute="top" secondItem="TaU-bq-KUZ" secondAttribute="top" id="D7G-B4-E2P"/>
+                                            <constraint firstItem="TIU-GJ-jrN" firstAttribute="centerY" secondItem="TaU-bq-KUZ" secondAttribute="centerY" id="Oo5-wC-kQs"/>
+                                            <constraint firstItem="bpP-uu-VOR" firstAttribute="trailing" secondItem="TaU-bq-KUZ" secondAttribute="trailing" constant="-10" id="R0R-LB-d5M"/>
+                                            <constraint firstItem="pFd-4x-XEP" firstAttribute="leading" secondItem="TaU-bq-KUZ" secondAttribute="leading" constant="5" id="XIc-GZ-iv7"/>
+                                            <constraint firstItem="bpP-uu-VOR" firstAttribute="centerY" secondItem="TaU-bq-KUZ" secondAttribute="centerY" id="cYF-P5-wCb"/>
+                                            <constraint firstItem="TIU-GJ-jrN" firstAttribute="centerX" secondItem="TaU-bq-KUZ" secondAttribute="centerX" id="f8u-IK-YDK"/>
+                                            <constraint firstAttribute="bottom" secondItem="pFd-4x-XEP" secondAttribute="bottom" id="ggu-pL-nH2"/>
+                                            <constraint firstItem="dms-lX-gt0" firstAttribute="top" secondItem="pFd-4x-XEP" secondAttribute="top" id="k5L-XT-6fo"/>
+                                            <constraint firstItem="TIU-GJ-jrN" firstAttribute="top" secondItem="TaU-bq-KUZ" secondAttribute="top" constant="2" id="qXZ-J0-jB0"/>
+                                        </constraints>
+                                    </view>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="PNX-yF-y0M">
+                                        <rect key="frame" x="0.0" y="727.5" width="374" height="27.5"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dvF-zc-Msa">
+                                                <rect key="frame" x="0.0" y="0.0" width="118" height="27.5"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="tinted" title="Unhide button [9]">
+                                                    <fontDescription key="titleFontDescription" style="UICTFontTextStyleCaption2"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="unhideGoButton9" destination="OsC-7Y-8fi" eventType="touchUpInside" id="T3R-Ed-EkH"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E7A-Q6-MbA">
+                                                <rect key="frame" x="120" y="0.0" width="136" height="27.5"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="tinted" title="Hide blocker view [3]">
+                                                    <fontDescription key="titleFontDescription" style="UICTFontTextStyleCaption2"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="hideBlockerView3" destination="OsC-7Y-8fi" eventType="touchUpInside" id="TBw-RR-h3j"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ka1-L5-IqF">
+                                                <rect key="frame" x="258" y="0.0" width="116" height="27.5"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="tinted" title="Enable button [2]">
+                                                    <fontDescription key="titleFontDescription" style="UICTFontTextStyleCaption2"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="enableGoButton2" destination="OsC-7Y-8fi" eventType="touchUpInside" id="ftQ-ky-pbF"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uia-QN-VEn">
+                                <rect key="frame" x="20" y="832" width="374" height="30"/>
+                                <color key="backgroundColor" systemColor="tertiarySystemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Wp9-YR-VP0"/>
+                                </constraints>
+                                <color key="textColor" systemColor="secondaryLabelColor"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6mc-Na-9Fu" userLabel="Go - 6">
+                                <rect key="frame" x="419" y="456" width="56" height="44"/>
+                                <accessibility key="accessibilityConfiguration" identifier="button_go_6"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Go">
+                                    <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle1"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="buttonGoTapped" destination="OsC-7Y-8fi" eventType="touchUpInside" id="8sM-Oh-1Fp"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="acA-7N-BhL" userLabel="Go - 7">
+                                <rect key="frame" x="410" y="538" width="56" height="44"/>
+                                <accessibility key="accessibilityConfiguration" identifier="button_go_7"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Go">
+                                    <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle1"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="buttonGoTapped" destination="OsC-7Y-8fi" eventType="touchUpInside" id="Q0u-9z-AVy"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xJz-nF-Djf" userLabel="Go - 8">
+                                <rect key="frame" x="409" y="630.5" width="56" height="44"/>
+                                <accessibility key="accessibilityConfiguration" identifier="button_go_8"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Go">
+                                    <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle1"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="buttonGoTapped" destination="OsC-7Y-8fi" eventType="touchUpInside" id="s9d-NF-M4L"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Ost-mn-LTg"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="xJz-nF-Djf" firstAttribute="leading" secondItem="Ost-mn-LTg" secondAttribute="trailing" constant="-5" id="4IW-Nz-SJ6"/>
+                            <constraint firstItem="acA-7N-BhL" firstAttribute="centerY" secondItem="0uw-yw-Xpg" secondAttribute="centerY" id="7dr-ar-Peg"/>
+                            <constraint firstItem="nk8-j3-Hi8" firstAttribute="leading" secondItem="Ost-mn-LTg" secondAttribute="leading" constant="20" id="GvE-f8-s3q"/>
+                            <constraint firstItem="6mc-Na-9Fu" firstAttribute="centerY" secondItem="SH1-v7-ZeM" secondAttribute="centerY" id="TTS-UH-8gr"/>
+                            <constraint firstItem="Ost-mn-LTg" firstAttribute="bottom" secondItem="Uia-QN-VEn" secondAttribute="bottom" id="UMQ-xb-yUg"/>
+                            <constraint firstItem="xJz-nF-Djf" firstAttribute="centerY" secondItem="IxK-TG-QbA" secondAttribute="centerY" id="eps-G9-4zk"/>
+                            <constraint firstItem="Ost-mn-LTg" firstAttribute="trailing" secondItem="Uia-QN-VEn" secondAttribute="trailing" constant="20" id="g67-ch-Yy1"/>
+                            <constraint firstItem="nk8-j3-Hi8" firstAttribute="top" secondItem="Ost-mn-LTg" secondAttribute="top" id="gDL-j0-uTu"/>
+                            <constraint firstItem="Uia-QN-VEn" firstAttribute="leading" secondItem="Ost-mn-LTg" secondAttribute="leading" constant="20" id="o3P-2H-kIK"/>
+                            <constraint firstItem="acA-7N-BhL" firstAttribute="leading" secondItem="Ost-mn-LTg" secondAttribute="trailing" constant="-4" id="rd2-UX-pkA"/>
+                            <constraint firstItem="6mc-Na-9Fu" firstAttribute="leading" secondItem="Ost-mn-LTg" secondAttribute="trailing" constant="5" id="reu-aQ-5Xy"/>
+                            <constraint firstItem="Ost-mn-LTg" firstAttribute="trailing" secondItem="nk8-j3-Hi8" secondAttribute="trailing" constant="20" id="w4u-9p-F6e"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="blockerView_3" destination="hWd-gb-Yrd" id="F0a-dG-tsi"/>
+                        <outlet property="buttonGo_2" destination="oIO-bm-ICo" id="HY2-Jd-Msd"/>
+                        <outlet property="buttonGo_9" destination="bpP-uu-VOR" id="iAi-fJ-yfP"/>
+                        <outlet property="textView" destination="Uia-QN-VEn" id="R2t-dQ-Pib"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Gi4-kg-uId" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-191.30434782608697" y="107.8125"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="secondarySystemBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="secondarySystemFillColor">
+            <color red="0.47058823529411764" green="0.47058823529411764" blue="0.50196078431372548" alpha="0.16" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="tertiaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="tertiarySystemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
